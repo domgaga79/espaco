@@ -1,11 +1,21 @@
 <?php
-require_once("Pessoa.php");
 
-$pessoa1 = new Pessoa("Iuri", 42);
+class Pessoa {
+    var $nome;
+    var $idade;
 
-echo $pessoa1->getNome();
-$pessoa1->setNome(" Gagarin");
-echo $pessoa1->getNome();
-var_dump($pessoa1);
+    public function __construct(string $nome, int $idade) {
+        $this->nome = $nome;
+        $this->idade = $idade;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public function setNome($nome) {
+        $this->nome = $nome;
+    }
+}
 
 ?>
